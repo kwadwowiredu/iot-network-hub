@@ -196,7 +196,7 @@ export default function About() {
           </button>
 
           {/* MAIN TEXT */}
-          <div className="px-10">
+          <div className="px-14">
             <h3
               key={items[current].title}
               className="text-3xl md:text-3xl font-bold text-gray-900 transition-opacity duration-500"

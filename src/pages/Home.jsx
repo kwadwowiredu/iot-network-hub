@@ -3,6 +3,7 @@ import {
   faUsers, faLightbulb, faMicrochip, faSchool 
 } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Home() {
@@ -45,18 +46,21 @@ export default function Home() {
         </p>
       
         <div className="flex gap-6 mt-6">
-          <button className="bg-yellow-500 text-black px-10 py-4 rounded-full font-bold hover:bg-yellow-400 transition shadow-2xl">
+          <Link
+            to="/contact"
+            className="bg-yellow-500 text-black px-10 py-4 rounded-full font-bold hover:bg-yellow-400 transition shadow-2xl"
+          >
             Join the Movement
-          </button>
+          </Link>
       
           {/* WATCH OUR WORK BUTTON */}
-          <a 
-            href="./pages/WhatWeDo.jsx"
+          <Link
+            to="/our-work"
             className="border border-yellow-500 px-10 py-4 rounded-full font-bold
-                       hover:bg-yellow-600 hover:text-black transition shadow-2xl"
+             hover:bg-yellow-600 hover:text-black transition shadow-2xl"
           >
             Watch Our Work
-          </a>
+          </Link>
         </div>
       </div>
       
@@ -120,7 +124,7 @@ export default function Home() {
 
 
 
-      {/* ========================= FUTURISTIC PARTNERS SECTION ========================= */}
+      {/* ========================= PARTNERS SECTION ========================= */}
       <section 
   className="relative py-28 bg-gray-50 dark:bg-black font-poppins transition overflow-hidden"
 >
@@ -165,10 +169,14 @@ export default function Home() {
     </div>
 
     {/* CTA */}
-    <button className="mt-16 bg-yellow-500 text-black px-12 py-5 rounded-full font-bold 
-      text-lg hover:bg-yellow-400 transition shadow-2xl">
+    <Link
+      to="/contact"
+      className="inline-block mt-16 bg-yellow-500 text-black px-12 py-5 rounded-full font-bold 
+             text-lg hover:bg-yellow-400 transition shadow-2xl"
+    >
       Become a Partner
-    </button>
+    </Link>
+
 
   </div>
 </section>
