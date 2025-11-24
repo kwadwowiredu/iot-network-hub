@@ -5,10 +5,26 @@ import { faTwitter, faLinkedin, faYoutube, faInstagram } from '@fortawesome/free
 export default function Contact() {
   return (
     <div className="pt-24 pb-16">
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold">Get In Touch</h1>
-          <p className="text-2xl mt-6">Let’s build the African future together</p>
+      {/* ===================== NEW MAP HERO SECTION ===================== */}
+      <section className="relative h-[60vh] w-full overflow-hidden">
+
+        {/* Google Map */}
+        <iframe
+          title="IoT Network Hub Kumasi Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.406655403099!2d-1.561590125005173!3d6.683388922364707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb97c813f31f2d%3A0x2d78e334c6c9e04d!2sSawaba%20ICT%20Center!5e0!3m2!1sen!2sgh!4v1732466057774!5m2!1sen!2sgh"
+          className="absolute top-0 left-0 w-full h-full border-0"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
+            Visit Our Kumasi Center
+          </h1>
+          <p className="text-xl md:text-2xl mt-4 text-gray-200">
+            Sawaba ICT Center, Ashanti Region • Ghana
+          </p>
         </div>
       </section>
 
@@ -37,7 +53,7 @@ export default function Contact() {
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="text-3xl text-primary mt-1" />
                   <div>
                     <h3 className="font-bold text-xl">Location</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Kumasi, Ashanti Region<br />Ghana, West Africa</p>
+                    <p className="text-gray-600 dark:text-gray-400">Sawaba, Adjacent Galali Park<br />Kumasi, Ghana</p>
                   </div>
                 </div>
 
@@ -70,10 +86,12 @@ export default function Contact() {
               <div className="mt-12">
                 <h3 className="text-2xl font-bold mb-6">Follow Us</h3>
                 <div className="flex space-x-6 text-3xl">
-                  <a href="#" className="text-secondary hover:text-primary transition"><FontAwesomeIcon icon={faTwitter} /></a>
-                  <a href="#" className="text-secondary hover:text-primary transition"><FontAwesomeIcon icon={faLinkedin} /></a>
-                  <a href="#" className="text-secondary hover:text-primary transition"><FontAwesomeIcon icon={faYoutube} /></a>
-                  <a href="#" className="text-secondary hover:text-primary transition"><FontAwesomeIcon icon={faInstagram} /></a>
+                  <a href="#" className="hover:bg-gray-700 hover:rounded-full p-2 transform transition-all duration-300 hover:-translate-y-2">
+                    <FontAwesomeIcon icon={['fab', 'twitter']} size="md" /></a> <a href="#" className="hover:bg-blue-500 hover:rounded-full p-2 transform transition-all duration-300 hover:-translate-y-2">
+                    <FontAwesomeIcon icon={['fab', 'linkedin']} size="md" /></a> <a href="#" className="hover:bg-red-500 hover:rounded-full p-2 transform transition-all duration-300 hover:-translate-y-2">
+                    <FontAwesomeIcon icon={['fab', 'youtube']} size="md" /></a> <a href="#" className="hover:bg-red-500 hover:rounded-full p-2 transform transition-all duration-300 hover:-translate-y-2">
+                    <FontAwesomeIcon icon={['fab', 'instagram']} size="md" />
+                  </a>
                 </div>
               </div>
             </div>

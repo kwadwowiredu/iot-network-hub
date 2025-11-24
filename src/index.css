@@ -6,7 +6,30 @@
 
 body {
   @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* HomePage Hero Section Animations */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 10s linear infinite; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+
+
+@keyframes slide-left { from {opacity:0; transform:translateX(-40px);} to {opacity:1;transform:translateX(0);} }
+@keyframes slide-right { from {opacity:0; transform:translateX(40px);} to {opacity:1;transform:translateX(0);} }
+
+.animate-slide-in-left { animation: slide-left 0.9s ease-out; }
+.animate-slide-in-right { animation: slide-right 0.9s ease-out; }
+
 
 /* Custom Animations for What We Do Hero Section */
 @keyframes fade-in {
@@ -35,6 +58,46 @@ body {
 .animate-rise {
   animation: rise 1.5s ease-out forwards;
 }
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Us Page Animations */
+/* Fade Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Slow Zoom (Ken Burns Effect) */
+@keyframes zoomSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+
 
 
 

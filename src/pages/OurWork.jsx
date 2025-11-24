@@ -6,7 +6,7 @@ import React from 'react';
 import { useState, useRef } from 'react';
 
 
-export default function WhatWeDo() {
+export default function OurWork() {
 
   const [isPlaying1, setIsPlaying1] = useState(false);
   const [isPlaying2, setIsPlaying2] = useState(false);

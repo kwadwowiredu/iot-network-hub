@@ -13,7 +13,7 @@ export default {
         accent: '#1976D2',    // Vibrant Blue
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
