@@ -106,13 +106,13 @@ export default function OurWork() {
             // VIDEO PROJECTS (overlay with play button)
             {
               type: "video",
-              source: "/smart_clap_demo.mp4",
+              source: "/clap_vid.mp4",
               title: "Smart Clap System Demo",
               desc: "A full demonstration of the sound-triggered lighting system in action."
             },
             {
               type: "video",
-              source: "/smart_handwash.mp4",
+              source: "/hand_wash.mp4",
               title: "Smart Handwash System",
               desc: "A touchless, sensor-based handwashing system that pumps water automatically."
             },
