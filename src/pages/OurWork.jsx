@@ -86,19 +86,19 @@ export default function OurWork() {
             // IMAGE PROJECTS (hover overlay)
             {
               type: "image",
-              source: "/src/assets/smart_clap_system_2.jpg",
+              source: "/smart_clap_system_2.jpg",
               title: "Smart Clap System",
               desc: "A sound-controlled IoT system that turns lights ON/OFF using acoustic triggers."
             },
             {
               type: "image",
-              source: "/src/assets/soil_moisture_detector_2.jpg",
+              source: "/soil_moisture_detector_2.jpg",
               title: "Automatic Irrigation System",
               desc: "A deep-tech moisture-sensing setup that pumps water automatically when the soil dries."
             },
             {
               type: "image",
-              source: "/src/assets/smart_dustbin_1.jpg",
+              source: "/smart_dustbin_1.jpg",
               title: "Smart Dustbin",
               desc: "A motion-activated dustbin that opens automatically when a user comes close."
             },
@@ -106,13 +106,13 @@ export default function OurWork() {
             // VIDEO PROJECTS (overlay with play button)
             {
               type: "video",
-              source: "/src/assets/smart_clap_demo.mp4",
+              source: "/smart_clap_demo.mp4",
               title: "Smart Clap System Demo",
               desc: "A full demonstration of the sound-triggered lighting system in action."
             },
             {
               type: "video",
-              source: "/src/assets/smart_handwash.mp4",
+              source: "/smart_handwash.mp4",
               title: "Smart Handwash System",
               desc: "A touchless, sensor-based handwashing system that pumps water automatically."
             },
@@ -208,7 +208,7 @@ export default function OurWork() {
       {/* VIDEO */}
       <video
         ref={videoRef1}
-        src="/src/assets/gdiw.mp4"
+        src="/gdiw.mp4"
         controls
         className="w-full h-[500px] object-cover"
         onPlay={handlePlay1}
@@ -240,7 +240,7 @@ export default function OurWork() {
       {/* VIDEO */}
       <video
         ref={videoRef2}
-        src="/src/assets/ogyeahoho.mov"
+        src="/Ogyeahoho.mov"
         controls
         className="w-full h-[500px] object-cover"
         onPlay={handlePlay2}
@@ -266,8 +266,6 @@ export default function OurWork() {
 
   </div>
 </section>
-
-
       {/* Impact Stats */}
       <section className="py-20 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">

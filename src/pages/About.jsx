@@ -8,8 +8,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
 
-import joshuaImg from "../assets/joshuaImg.jpg"
-import emmanuelImg from "../assets/emmanuelImg.jpg"
+import joshuaImg from "/joshuaImg.jpg"
+import emmanuelImg from "/emmanuelImg.jpg"
 
 const items = [
   {
@@ -28,11 +28,11 @@ const items = [
 
 export default function About() {
   const slides = [
-    "/src/assets/veep.jpg",
-    "/src/assets/team_2.jpg",
-    "/src/assets/kids_2.jpg",
-    "/src/assets/events_1.jpg",
-    "/src/assets/meetup_1.jpg"
+    "/veep.jpg",
+    "/team_2.jpg",
+    "/kids_2.jpg",
+    "/events_1.jpg",
+    "/meetup_1.jpg"
   ]
 
   const [current, setCurrent] = useState(0);

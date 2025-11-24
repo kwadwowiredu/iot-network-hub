@@ -74,7 +74,7 @@ export default function Home() {
             loop
             className="rounded-2xl w-[750px] h-[500px] object-cover shadow-2xl"
           >
-            <source src="/src/assets/hero-vid.mp4" type="video/mp4"/>
+            <source src="/hero-vid.mp4" type="video/mp4"/>
           </video>
       
         </div>

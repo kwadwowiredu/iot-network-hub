@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import OurWork from './pages/OurWork';
 import Contact from './pages/Contact';
-import logo from './assets/logo.png';
+import logo from '/logo.png';
 
 function App() {
   const location = useLocation(); // <-- Now works properly
