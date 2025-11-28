@@ -8,8 +8,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
-import joshuaImg from "/joshuaImg.jpg";
-import emmanuelImg from "/emmanuelImg.jpg";
+const joshuaImg = "/joshuaImg.jpg";
+const emmanuelImg = "/emmanuelImg.jpg";
 
 const items = [
   {
@@ -55,7 +55,7 @@ export default function About() {
     <div className="pt-20 font-poppins">
 
       {/* ========================= HERO SLIDESHOW ========================= */}
-      <section className="relative h-[40vh] sm:h-[75vh] md:h-[85vh] xl:h-[90vh] w-full overflow-hidden">
+      <section className="relative h-[40vh] sm:h-[65vh] md:h-[75vh] xl:h-[80vh] w-full overflow-hidden">
 
         {/* Slides */}
         {slides.map((img, i) => (

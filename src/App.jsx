@@ -39,108 +39,98 @@ function App() {
     <div className="font-sans min-h-screen">
 
       {/* ===================== NAVBAR ===================== */}
-      <nav className="fixed top-0 w-full z-50 bg-white/70 dark:bg-gray-900/70 border-b border-gray-300/20 dark:border-gray-700/20 backdrop-blur-xl shadow-sm">
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="IoT Network Hub"
-              className="h-10 w-10 object-contain sm:h-12 sm:w-12"
-            />
-            <div className="hidden sm:block">
-              <h1 className="text-lg sm:text-xl font-bold text-yellow-500">
-                IoT Network Hub (Kumasi)
-              </h1>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Kumasi • Ghana</p>
-            </div>
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
-
-              return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`relative font-medium transition ${
-                    isActive
-                      ? "text-yellow-500"
-                      : "text-gray-700 dark:text-gray-300 hover:text-yellow-500"
-                  }`}
-                >
-                  {item.name}
-
-                  {isActive && (
-                    <span className="absolute left-0 -bottom-1 h-[3px] w-full bg-yellow-500 rounded-full"></span>
-                  )}
-                </Link>
-              );
-            })}
-
-            {/* Dark Mode Switch */}
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 bg-gray-200 dark:bg-gray-800 rounded-md"
-            >
-              <FontAwesomeIcon
-                icon={darkMode ? faSun : faMoon}
-                className="text-xl text-yellow-500"
-              />
-            </button>
+      {/* NAVBAR */}
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/70 dark:bg-gray-900/70 border-b border-gray-300/30 dark:border-gray-700/30 shadow-sm transition">
+      
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      
+        {/* LOGO */}
+        <Link to="/" className="flex items-center space-x-3">
+          <img src={logo} alt="IoT Network Hub" className="h-12 w-12 object-contain" />
+          <div>
+            <h1 className="text-sm font-bold text-yellow-500">IoT Network Hub (Kumasi)</h1>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Kumasi • Ghana</p>
           </div>
-
-          {/* Mobile Menu Button */}
+        </Link>
+      
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map(item => {
+            const isActive = location.pathname === item.path;
+          
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`
+                  relative font-medium transition 
+                  ${isActive ? "text-yellow-500" : "text-gray-700 dark:text-gray-300 hover:text-yellow-500"}
+                `}
+              >
+                {item.name}
+                {isActive && (
+                  <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-yellow-500 rounded-full"></span>
+                )}
+              </Link>
+            );
+          })}
+    
+          {/* DARK MODE TOGGLER (DESKTOP) */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-md bg-gray-200 dark:bg-gray-800 transition"
+          >
+            <FontAwesomeIcon icon={darkMode ? faSun : faMoon} className="text-xl text-yellow-500" />
+          </button>
+        </div>
+        
+        {/* MOBILE RIGHT SIDE (TOGGLER + MENU BUTTON) */}
+        <div className="flex items-center space-x-4 md:hidden">
+        
+          {/* DARK MODE TOGGLER — ALWAYS VISIBLE */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-md bg-gray-200 dark:bg-gray-800 transition"
+          >
+            <FontAwesomeIcon icon={darkMode ? faSun : faMoon} className="text-md text-yellow-500" />
+          </button>
+        
+          {/* MENU BUTTON */}
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
-            className="md:hidden text-2xl text-gray-900 dark:text-gray-300"
+            className="text-2xl text-gray-800 dark:text-gray-200"
           >
             <FontAwesomeIcon icon={mobileMenu ? faTimes : faBars} />
           </button>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenu && (
-          <div className="md:hidden bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-t border-gray-300 dark:border-gray-700 p-4">
-
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
-
-              return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setMobileMenu(false)}
-                  className={`block py-3 text-lg ${
-                    isActive
-                      ? "text-yellow-500 font-semibold"
-                      : "text-gray-700 dark:text-gray-300"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              );
-            })}
-
-            {/* Mobile Dark Mode Toggle */}
-            <div className="mt-4 flex justify-center">
-              <button
-                onClick={() => setDarkMode(!darkMode)}
-                className="p-3 bg-gray-200 dark:bg-gray-800 rounded-md"
+        
+      </div>
+        
+      {/* MOBILE MENU */}
+      {mobileMenu && (
+        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-700">
+        
+          {navItems.map(item => {
+            const isActive = location.pathname === item.path;
+          
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setMobileMenu(false)}
+                className={`
+                  block px-6 py-3 text-lg transition 
+                  ${isActive ? "text-yellow-500 font-semibold" : "text-gray-700 dark:text-gray-300"}
+                `}
               >
-                <FontAwesomeIcon
-                  icon={darkMode ? faSun : faMoon}
-                  className="text-xl text-yellow-500"
-                />
-              </button>
-            </div>
-          </div>
-        )}
-      </nav>
+                {item.name}
+              </Link>
+            );
+          })}
+    
+        </div>
+      )}
+    </nav>
 
       {/* ===================== ROUTES ===================== */}
       <div>
